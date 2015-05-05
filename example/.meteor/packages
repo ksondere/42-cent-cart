@@ -10,3 +10,5 @@ natestrauser:cart
 accounts-password
 accounts-ui
 iron:router
+
+npm-container

@@ -8,7 +8,7 @@ Package.describe({
 
 Package.on_use(function (api) {
 	api.versionsFrom("METEOR@0.9.0");
-	Npm.depends({"stripe": "2.8.0", "authorize-net": "1.0.2"});
+	Npm.depends({"stripe": "2.8.0", "authorize-net": "1.0.4"});
 
 	api.use([
 	    'tracker@1.0.3',
@@ -19,7 +19,7 @@ Package.on_use(function (api) {
 	  , 'client');
 
 	api.use([
-		'iron:router@1.0.0', 'mongo@1.0.8', 'underscore', 'accounts-base', 'random'
+		'iron:router@1.0.0', 'mongo@1.0.8', 'underscore', 'accounts-base', 'random', 'meteorhacks:npm', 'meteorhacks:async'
 		], ['server','client']);
 
 	
@@ -27,11 +27,11 @@ Package.on_use(function (api) {
 	api.addFiles('lib/stripe/stripe_checkout.js', 'client');
 	api.addFiles('lib/stripe/stripe_server.js', 'server');
 
-    api.addFiles('lib/authorize-net/authnet_server.js', 'server');
+    api.addFiles('lib/authorize-net/authnet_server.js', ['server']);
 
-    api.add_files(['lib/both/environment.js'], ['client','server']);
-    api.add_files(['lib/client/cart.html','lib/client/cart.js'], 'client');
-    api.add_files(['lib/server/publications.js'], 'server');
+    api.addFiles(['lib/both/environment.js'], ['client','server']);
+    api.addFiles(['lib/client/cart.html','lib/client/cart.js'], 'client');
+    api.addFiles(['lib/server/publications.js'], 'server');
 
     api.export('Cart', ['client','server']);
 });
