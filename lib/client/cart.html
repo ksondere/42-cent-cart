@@ -1,51 +1,70 @@
 <template name="CartSummary">
-	{{itemCount}} items
-	<br>
-	Total ${{itemTotal}}
-	{{#if itemsInCart}}
-		<br>
-		<a href="{{pathFor 'cart'}}">View Cart</a>
-		<br>
-		{{>CartPayNow}}
-		<br>
-	{{/if}}
+    {{itemCount}} items
+    <br>
+    Total ${{itemTotal}}
+    {{#if itemsInCart}}
+        <br>
+        <a href="{{pathFor 'cart'}}">View Cart</a>
+        <br>
+    {{/if}}
 </template>
 
 <template name="CartAddItemButton">
-	<button class="add-item">Add To Cart</button>
+    <a href="#" class="add-item">Add To Cart</a>
 </template>
 
 <template name="CartPayNow">
-	<!--<button id="pay-now">Pay Now</button>-->
-    <button class="modal" data-modal-template="CartOrderEntry">Pay Now</button>
-	{{> modal}}
 </template>
 
+<template name="CartCreditCardInfo">
+    <h3>Pay with Credit Card</h3>
+    <hr>
+    Name on credit card:
+    <input type="text" id="cc-name">
+    <br>
+    Credit Card Number: 4012888818888
+    <input type="text" id="cc-number">
+    <br>
+    Expiration Date: 1, 2017
+    <input type="text" id="cc-exp-month">
+    <input type="text" id="cc-exp-year">
+    <br>
+    Card Security Number: 666
+    <input type="text" id="cc-cvv">
+    <br>
+    <a href="#" id="pay-now">Pay with credit card</a>
+    <hr>
+    <h3>--OR--</h3>
+    <hr>
+    <h3>Pay with Visa Checkout</h3>
+    <img class="v-button" role="button" tabindex="0"
+         src="https://sandbox-assets.secure.checkout.visa.com/wallet-services-web/xo/button.png" alt="Visa Checkout"/>
+</template>
 
 <template name="CartItems">
-	{{#if hasItems}}
-		{{itemCount}} items
-		<br>
-		Total ${{itemTotal}}
-		<br>
-		{{>CartPayNow}}
-		<br>
-		<hr>
-		<br>
-		{{#each items}}
-			{{>CartItem}}
-		{{/each}}
-	{{else}}
-		No items in cart!
-	{{/if}}
+    {{#if hasItems}}
+        <br>
+        {{#each items}}
+            {{>CartItem}}
+        {{/each}}
+        <hr>
+        {{itemCount}} items
+        <br>
+        Total ${{itemTotal}}
+        <br>
+        <hr>
+        {{>CartCreditCardInfo}}
+    {{else}}
+        No items in cart!
+    {{/if}}
 </template>
 
 <template name="CartItem">
-	<div>
-		{{name}} - {{price}}
-		<br>
-		<a href="#" class="remove">Remove</a>
-	</div>
-	<hr>
-	<br><br><br>
+    <div>
+        {{name}} - {{price}}
+        <br>
+        <a href="#" class="remove">Remove</a>
+    </div>
+    <hr>
+    <br><br><br>
 </template>
