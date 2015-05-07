@@ -1,0 +1,24 @@
+<template name="products">
+    <br>
+    <br>
+    {{> CartSummary}}
+    <br>
+    <br>
+    <a href="{{pathFor 'cart'}}">View Cart</a>
+    <br>
+    <br>
+    <hr>
+    <div>
+        <h4>Static Product</h4>
+        $1.99
+        {{>CartAddItemButton price=1.99 name="Static Product" _id='static'}}
+    </div>
+    <hr>
+    {{#each products}}
+        <div>
+            <h3>{{name}}</h3>
+            {{price}}
+            {{>CartAddItemButton}}
+        </div>
+    {{/each}}
+</template>

@@ -1,6 +1,4 @@
 <template name="CartSummary">
-	{{salesTotal}} purchase
-	<br>
 	{{itemCount}} items
 	<br>
 	Total ${{itemTotal}}
@@ -9,6 +7,7 @@
 		<a href="{{pathFor 'cart'}}">View Cart</a>
 		<br>
 		{{>CartPayNow}}
+		<br>
 	{{/if}}
 </template>
 
@@ -17,8 +16,11 @@
 </template>
 
 <template name="CartPayNow">
-	<button id="pay-now">Pay Now</button>
+	<!--<button id="pay-now">Pay Now</button>-->
+    <button class="modal" data-modal-template="CartOrderEntry">Pay Now</button>
+	{{> modal}}
 </template>
+
 
 <template name="CartItems">
 	{{#if hasItems}}

@@ -23,13 +23,9 @@ Package.on_use(function (api) {
 		], ['server','client']);
 
 	
-	api.addFiles('lib/stripe/stripe_client.js', 'client');
-	api.addFiles('lib/stripe/stripe_checkout.js', 'client');
-	api.addFiles('lib/stripe/stripe_server.js', 'server');
-
     api.addFiles('lib/authorize-net/authnet_server.js', ['server']);
 
-    api.addFiles(['lib/both/environment.js'], ['client','server']);
+    api.addFiles(['lib/both/environment.js','lib/both/routes.js'], ['client','server']);
     api.addFiles(['lib/client/cart.html','lib/client/cart.js'], 'client');
     api.addFiles(['lib/server/publications.js'], 'server');
 

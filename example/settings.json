@@ -1,8 +1,4 @@
 {
-  "public" : {
-    "stripe_pk":"pk_test_45lWtHXp3aQGRzPBnGkKlqrY"
-  },
-  "stripe_sk":"sk_test_NmpFcddBWjXdX45V5sN65oGq",
   "authNetOptions": {
     "API_LOGIN_ID": "2msN9nrBG8K",
     "TRANSACTION_KEY": "43jNykM6kC8v87Nb"
