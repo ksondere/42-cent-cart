@@ -1,16 +1,30 @@
 <head>
-  <title>cart - example</title>
+    <title>cart - example</title>
+    <!-- Visa Checkout JavaScript function -->
+    <script type="text/javascript">
+        function onVisaCheckoutReady() {
+            V.init({
+                apikey: "17SOX33VCFW1A9FVJI4J13tvR2oX1EzHzYP5exFIuA1Ej1XyQ",
+                settings: {
+                    logoUrl: "http://demo.visacheckout.com/presidio/wp-content/uploads/2014/09/logo.png"
+                }
+            });
+            V.on("payment.success", function (payment) {
+                document.write(JSON.stringify(payment));
+            });
+        }
+    </script>
 </head>
 
 <template name="layout">
-  <header>
-    <h1>Cart Demo</h1>
-  	{{> loginButtons}}
-  </header>
-  <hr>
+    <header>
+        <h1>Cart Demo</h1>
+        {{> loginButtons}}
+    </header>
+    <hr>
 
-  <article>
-    {{> yield}}
-  </article>
+    <article>
+        {{> yield}}
+    </article>
 </template>
 
