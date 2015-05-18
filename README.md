@@ -1,17 +1,17 @@
-cart
+42-cent-cart
 ===========
 
-A simple shopping cart package for meteorjs that uses stripe for payments
+A simple shopping cart package for meteorjs that uses 42-cent npm to provide payment gateway options   
 
-Run the example app with `meteor --settings settings.json` - settings are needed for stripe api keys
+Run the example app with `meteor --settings settings.json` - settings are needed for payment gateway api keys
+
+42-cent-cart is derived from nstrausser:cart
 
 Live demo at http://cartdemo.meteor.com
-
 
 ------
 
 messy notes below....
-
 
 Exports `Cart` object
 

@@ -1,14 +1,14 @@
 Package.describe({
-    summary: "Cart",
-    name: "natestrauser:cart",
-    summary: "A simple and pluggable shopping cart that uses stripe for payments",
-  	version: "0.0.5",
-    git: "https://github.com/nate-strauser/meteor-cart.git"
+    summary: "shopping cart",
+    name: "ksondere:42-cent-cart",
+    summary: "A simple and pluggable shopping cart that uses 42-cent npm for payments gateway options	j",
+  	version: "0.0.1",
+    git: "https://github.com/ksondere/42-cent-cart.git"
 });
 
 Package.on_use(function (api) {
 	api.versionsFrom("METEOR@0.9.0");
-	Npm.depends({"stripe": "2.8.0", "authorize-net": "1.0.4"});
+	Npm.depends({"authorize-net": "1.0.4"});
 
 	api.use([
 	    'tracker@1.0.3',
@@ -23,7 +23,7 @@ Package.on_use(function (api) {
 		], ['server','client']);
 
 	
-    api.addFiles('lib/authorize-net/authnet_server.js', ['server']);
+    api.addFiles('lib/gateways/authnet_server.js', ['server']);
 
     api.addFiles(['lib/both/environment.js','lib/both/routes.js'], ['client','server']);
     api.addFiles(['lib/client/cart.html','lib/client/cart.js'], 'client');
