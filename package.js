@@ -19,7 +19,7 @@ Package.on_use(function (api) {
 	  , 'client');
 
 	api.use([
-		'iron:router@1.0.0', 'mongo@1.0.8', 'underscore', 'accounts-base', 'random', 'meteorhacks:npm', 'meteorhacks:async'
+		'iron:router@1.0.0', 'mongo@1.0.8', 'underscore', 'accounts-base', 'random', 'meteorhacks:npm', 'meteorhacks:async', 'materialize:materialize'
 		], ['server','client']);
 
 	
