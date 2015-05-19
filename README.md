@@ -5,13 +5,13 @@ A simple shopping cart package for meteorjs that uses 42-cent npm to provide pay
 
 Available payment gateways will be:
 
-Authorize.net
-Braintree
-NMI
-Omise
-Payflow
-RocketGate
-Stripe
+Authorize.net,
+Braintree,
+NMI,
+Omise,
+Payflow,
+RocketGate,
+Stripe,
 VirtualMerchant
 
 Run the example app by going into the example directory and running `meteor`
