@@ -3,11 +3,22 @@
 
 A simple shopping cart package for meteorjs that uses 42-cent npm to provide payment gateway options   
 
-Run the example app with `meteor --settings settings.json` - settings are needed for payment gateway api keys
+Available payment gateways will be:
+
+Authorize.net
+Braintree
+NMI
+Omise
+Payflow
+RocketGate
+Stripe
+VirtualMerchant
+
+Run the example app by going into the example directory and running `meteor`
 
 42-cent-cart is derived from nstrausser:cart
 
-Live demo at http://cartdemo.meteor.com
+Live demo at http://42-cent-cart.meteor.com
 
 ------
 

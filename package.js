@@ -1,14 +1,14 @@
 Package.describe({
     summary: "shopping cart",
     name: "ksondere:42-cent-cart",
-    summary: "A simple and pluggable shopping cart that uses 42-cent npm for payments gateway options	j",
+    summary: "A simple and pluggable shopping cart that uses 42-cent npm for payments gateway options",
   	version: "0.0.1",
     git: "https://github.com/ksondere/42-cent-cart.git"
 });
 
 Package.on_use(function (api) {
 	api.versionsFrom("METEOR@0.9.0");
-	Npm.depends({"authorize-net": "1.0.4"});
+	Npm.depends({"42-cent": "1.1.0", "authorize-net": "1.0.4"});
 
 	api.use([
 	    'tracker@1.0.3',
@@ -23,7 +23,7 @@ Package.on_use(function (api) {
 		], ['server','client']);
 
 	
-    api.addFiles('lib/gateways/authnet_server.js', ['server']);
+    api.addFiles(['lib/server/payments.js'], ['server']);
 
     api.addFiles(['lib/both/environment.js','lib/both/routes.js'], ['client','server']);
     api.addFiles(['lib/client/cart.html','lib/client/cart.js'], 'client');
