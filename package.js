@@ -31,3 +31,13 @@ Package.on_use(function (api) {
 
     api.export('Cart', ['client','server']);
 });
+/*
+Velocity package testing does not work well enough to use this yet.
+Currently testing using the example code.
+Package.onTest(function(api) {
+	api.use(['mike:mocha-package@0.5.6', 'practicalmeteor:chai']);
+	api.use('ksondere:42-cent-cart');
+	api.addFiles('tests/server/42-cent-cart.js', 'server');
+	api.addFiles('tests/client/42-cent-cart.js', 'client');
+});
+*/
