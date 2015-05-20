@@ -22,8 +22,6 @@ Live demo at http://42-cent-cart.meteor.com
 
 ------
 
-messy notes below....
-
 Exports `Cart` object
 
 creates a collection that is accessible at `Cart.Items`
