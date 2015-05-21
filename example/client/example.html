@@ -17,14 +17,29 @@
 </head>
 
 <template name="layout">
-    <header>
-        <h1>Cart Demo</h1>
-        {{> loginButtons}}
-    </header>
-    <hr>
+    <div class="container">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo"> 42 Cent Cart</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="/cart">Cart</a></li>
+                    <li><a href="/">Products</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="/cart">Cart</a></li>
+                    <li><a href="/">Products</a></li>
+                </ul>
+            </div>
+        </nav>
+        <header>
+            {{> loginButtons}}
+        </header>
+        <hr>
 
-    <article>
-        {{> yield}}
-    </article>
+        <article>
+            {{> yield}}
+        </article>
+    </div>
 </template>
 
