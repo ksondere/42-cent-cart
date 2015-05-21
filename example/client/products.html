@@ -1,22 +1,22 @@
 <template name="products">
     {{> CartSummary}}
     <hr>
-    <ul class="collection">
-        <li class="collection-item avatar">
+    <div class="row">
+        <div class="col s4">
             <img src="public/images/shirt.jpg" alt="" class="circle">
             <span class="title">Static Product</span><br>
             $1.99<br>
             {{>CartAddItemButton price=1.99 name="Static Product" _id='static'}}
-        </li>
+        </div>
         {{#each products}}
-            <li class="collection-item avatar">
+            <div class="col s4">
                 <img src="public/images/shirt.jpg" alt="" class="circle">
                 <span class="title">{{name}}</span><br>
                 ${{price}}<br>
                 {{>CartAddItemButton}}
-            </li>
+            </div>
         {{/each}}
-    </ul>
+    </div>
     <br>
     <a href="http://www.freepik.com/free-photos-vectors/mockup">Mockup vector designed by Freepik</a>
 </template>
