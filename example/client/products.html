@@ -1,17 +1,22 @@
 <template name="products">
     {{> CartSummary}}
-   <hr>
-    <div>
-        <h4>Static Product</h4>
-        $1.99
-        {{>CartAddItemButton price=1.99 name="Static Product" _id='static'}}
-    </div>
     <hr>
-    {{#each products}}
-        <div>
-            <h3>{{name}}</h3>
-            {{price}}
-            {{>CartAddItemButton}}
+    <div class="row">
+        <div class="col s4">
+            <div><img src="images/BambooTree1.jpg" alt="" ></div>
+
+            <span class="title">Static Product</span><br>
+            $1.99<br>
+            {{>CartAddItemButton price=1.99 name="Static Product- Bamboo Tree" _id='static'}}
         </div>
-    {{/each}}
+        {{#each products}}
+            <div class="col s4">
+                <div><img src="images/{{image}}" alt="" ></div>
+                <span class="title">{{name}}</span><br>
+                ${{price}}<br>
+                {{>CartAddItemButton}}
+            </div>
+        {{/each}}
+    </div>
+    <br>
 </template>
