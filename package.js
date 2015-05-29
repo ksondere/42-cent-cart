@@ -1,7 +1,7 @@
 Package.describe({
     summary: "shopping cart",
     name: "ksondere:42-cent-cart",
-    summary: "A simple and pluggable shopping cart that uses 42-cent npm for payments gateway options",
+    summary: "A simple and pluggable shopping cart that uses 42-cent npm for payment gateway options",
   	version: "0.0.1",
     git: "https://github.com/ksondere/42-cent-cart.git"
 });
@@ -25,9 +25,11 @@ Package.on_use(function (api) {
 	
     api.addFiles(['lib/server/payments.js'], ['server']);
 
-    api.addFiles(['lib/both/environment.js','lib/both/routes.js'], ['client','server']);
-    api.addFiles(['lib/client/cart.html','lib/client/cart.js'], 'client');
+    api.addFiles(['lib/both/environment.js','lib/both/routes.js','lib/both/collections.js', 'lib/both/init.js', 'lib/both/payment_gateways.js'],
+		['client','server']);
+    api.addFiles(['lib/client/cart.html','lib/client/cart.js', 'lib/client/products.html'], 'client');
     api.addFiles(['lib/server/publications.js'], 'server');
 
     api.export('Cart', ['client','server']);
+	api.export('Products', ['client', 'server']);
 });
