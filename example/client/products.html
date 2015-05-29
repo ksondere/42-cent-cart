@@ -3,14 +3,15 @@
     <hr>
     <div class="row">
         <div class="col s4">
-            <img src="public/images/shirt.jpg" alt="" class="circle">
+            <div><img src="images/BambooTree1.jpg" alt="" ></div>
+
             <span class="title">Static Product</span><br>
             $1.99<br>
-            {{>CartAddItemButton price=1.99 name="Static Product" _id='static'}}
+            {{>CartAddItemButton price=1.99 name="Static Product- Bamboo Tree" _id='static'}}
         </div>
         {{#each products}}
             <div class="col s4">
-                <img src="public/images/shirt.jpg" alt="" class="circle">
+                <div><img src="images/{{image}}" alt="" ></div>
                 <span class="title">{{name}}</span><br>
                 ${{price}}<br>
                 {{>CartAddItemButton}}
@@ -18,5 +19,4 @@
         {{/each}}
     </div>
     <br>
-    <a href="http://www.freepik.com/free-photos-vectors/mockup">Mockup vector designed by Freepik</a>
 </template>
