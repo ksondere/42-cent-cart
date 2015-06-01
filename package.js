@@ -25,7 +25,7 @@ Package.on_use(function (api) {
 	
     api.addFiles(['lib/server/payments.js'], ['server']);
 
-    api.addFiles(['lib/both/environment.js','lib/both/routes.js','lib/both/collections.js', 'lib/both/init.js', 'lib/both/payment_gateways.js'],
+    api.addFiles(['lib/both/environment.js','lib/both/routes.js','lib/both/collections.js', 'lib/both/payment_gateways.js'],
 		['client','server']);
     api.addFiles(['lib/client/cart.html','lib/client/cart.js', 'lib/client/products.html'], 'client');
     api.addFiles(['lib/server/publications.js'], 'server');
