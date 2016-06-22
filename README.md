@@ -61,3 +61,6 @@ add cart preview route
 adjust quantity
 remove items from cart
 bootstrap styling by default
+
+
+just hanging out again on the 42-cent cart and trying to become a better typist at the same time.  Sometimes I just need to take the time to practice a little bit so I can remember how to actually become good at this.  It is one of my great desires to be able to type like a madman
